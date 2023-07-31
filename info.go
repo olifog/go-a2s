@@ -145,7 +145,7 @@ func (c *Client) QueryInfo() (*ServerInfo, error) {
 
 	header := reader.ReadUint8()
 	if header != A2S_INFO_RESPONSE {
-		return nil, ErrUnsupportedHeader
+		// return nil, ErrUnsupportedHeader
 	}
 
 	info.Protocol = reader.ReadUint8()
